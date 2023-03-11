@@ -1,0 +1,35 @@
+/* .form-group{
+    margin-left: 400px;
+    width: 500px;
+
+}
+.form-outline{
+    margin-left: 400px;
+    width: 500px;
+}
+.btn{
+    margin-left: 400px;
+}
+.text-center{
+    margin-right: 200px;
+}
+.col{
+    margin-right: 150px;
+}
+.form-check{
+    margin-left: 330px;
+}
+#LoginForm{
+    margin-top: 100px;
+    align-content: center;
+} */
+
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }

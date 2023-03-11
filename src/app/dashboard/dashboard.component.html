@@ -1,0 +1,85 @@
+<app-home-page></app-home-page>
+<div class="center-content">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Congratulations</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab label="Fill Information">
+          <form id="InfoForm" #InfoForm="ngForm" (ngSubmit)="addInfo()">
+            <!-- <mat-form-field class="example-full-width"> -->
+            <!-- {{user  | json}} -->
+            <!-- <mat-form-field class="example-full-width">
+              <mat-label>Cno</mat-label>
+              <input type="number" matInput placeholder="Cno" value="" name="cno" [(ngModel)]="info.cno" required
+                #cno="ngModel" [ngModelOptions]="{standalone: true}" [class.is-invalid]="cno.invalid && cno.touched">
+            </mat-form-field> -->
+            <mat-form-field class="example-full-width">
+              <mat-label>Event Type</mat-label>
+              <input type="text" matInput placeholder="Event Type" value="" [(ngModel)]="info.eventType" required
+                [ngModelOptions]="{standalone: true}" #eventType="ngModel"
+                [class.is-invalid]="eventType.invalid && eventType.touched">
+
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Event details</mat-label>
+              <input type="text" matInput placeholder="Event details" value="" [(ngModel)]="info.eventDetails" required
+                [ngModelOptions]="{standalone: true}" #eventDetails="ngModel"
+                [class.is-invalid]="eventDetails.invalid && eventDetails.touched">
+
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Event Location</mat-label>
+              <input type="text" matInput placeholder="Location" value="" [(ngModel)]="info.eventLocation" required
+                [ngModelOptions]="{standalone: true}" #eventLocation="ngModel"
+                [class.is-invalid]="eventLocation.invalid && eventLocation.touched">
+
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Date Of Event</mat-label>
+              <input type="date" matInput placeholder="DOE" value="" name="DOE" [(ngModel)]="info.DOE" required
+                #DOE="ngModel" [class.is-invalid]="DOE.invalid && DOE.touched">
+
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-form-field>
+                <mat-select name="status" [(ngModel)]="info.status" placeholder="Participation Status">
+                  <mat-option [value]="'First Rank'">First Rank</mat-option>
+                  <mat-option [value]="'second Rank'">second Rank</mat-option>
+                  <mat-option [value]="'Third Rank'">Third Rank</mat-option>
+                  <mat-option [value]="'Participated'">Participated</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Level</mat-label>
+              <mat-select name="countryString" [(ngModel)]="info.level" placeholder="Level">
+                <mat-option [value]="'InterNational'">InterNational</mat-option>
+                <mat-option [value]="'National'">National</mat-option>
+                <mat-option [value]="'State'">State </mat-option>
+                <mat-option [value]="'College'">College </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Organised By</mat-label>
+              <input type="text" matInput placeholder="Organised By" value="" [(ngModel)]="info.organisedBy" required
+                [ngModelOptions]="{standalone: true}" #organisedBy="ngModel"
+                [class.is-invalid]="organisedBy.invalid && organisedBy.touched">
+            </mat-form-field>
+
+            <button mat-button color="primary" type="submit" [disabled]="InfoForm.form.invalid">Submit</button>
+          </form>
+
+        </mat-tab>
+      </mat-tab-group>
+
+    </mat-card-content>
+
+  </mat-card>
+</div>
